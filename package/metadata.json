@@ -1,0 +1,19 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "henrydbeveridge@gmail.com",
+                "Name": "Henry Beveridge"
+            }
+        ],
+        "Category": "Multimedia",
+        "Description": "A widget that only shows the lyrics of the current song in the panel",
+        "Icon": "view-media-lyrics",
+        "Id": "com.github.illuminate-dev.onlyrics",
+        "Name": "Onlyrics",
+        "Version": "1",
+        "Website": "https://github.com/Illuminate-dev/plasmoid-onlyrics"
+    },
+    "X-Plasma-API": "declarativeappletscript",
+    "KPackageStructure": "Plasma/Applet"
+}
