@@ -126,8 +126,8 @@ Item {
     }
     
 
-    width: units.gridUnit * 10
-    height: units.gridUnit * 4
+    // width: units.gridUnit * 10
+    // height: units.gridUnit * 4
 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     Plasmoid.compactRepresentation: LyricsDisplay { }
