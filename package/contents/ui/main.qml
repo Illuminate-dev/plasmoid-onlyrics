@@ -72,7 +72,6 @@ Item {
     }
 
     Component.onCompleted: {
-        plasmoid.removeAction("configure");
         mpris2Source.serviceForSource("@multiplex").enableGlobalShortcuts()
         updateMprisSourcesModel()
     }
