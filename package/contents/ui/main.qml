@@ -45,6 +45,25 @@ Item {
         return decodeURIComponent(lastUrlPart)
     }
 
+    property string artist: {
+        if (!currentMetadata) {
+            return ""
+        }
+
+        var xesamArtist = currentMetadata["xesam:artist"]
+
+        if (xesamArtist) {
+            return xesamArtist.join(",")
+        }
+
+        return ""
+
+    }
+
+    property var position: mpris2Source.currentData ? mpris2Source.currentData.Position / 1000 : 0
+    // property var lastUpdated: mpris2Source.currentData ? mpris2Source.currentData.LastUpdated : 0
+
+
     property var mprisSourcesModel: []
 
     PlasmaCore.DataSource {
@@ -57,6 +76,7 @@ Item {
 
         engine: "mpris2"
         connectedSources: sources
+        interval: 50
 
         onSourceAdded: {
             updateMprisSourcesModel()
@@ -123,6 +143,7 @@ Item {
 
         root.mprisSourcesModel = model;
     }
+
     
 
     // width: units.gridUnit * 10
@@ -130,5 +151,6 @@ Item {
 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     Plasmoid.compactRepresentation: LyricsDisplay { }
+
 
 }
